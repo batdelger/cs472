@@ -1,0 +1,66 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: rgb(10, 109, 63);
+}
+
+.mood-image {
+    height: 200px;
+}
+
+.sub-title, .title {
+    text-transform: capitalize;
+    color: rgb(195, 241, 215);
+}
+
+.image-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.image-container div {
+    margin: 5px;
+}
+
+.image-container h3 {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+li, p, h3 {
+    color: white;
+}
+
+p:first-letter {
+    font-size: 1.5em;
+}
+
+a {
+    color:#ff9b9b;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.movie-list {
+    list-style: none;
+    counter-reset: my-custom-counter 4;
+    
+}
+  
+.movie-list li {
+    counter-increment: my-custom-counter -1;
+  }
+
+.movie-list li::before {
+    content: counter(my-custom-counter) '. ';
+    margin-left: -20px;
+}
+
+.movie-list dt {
+    color:rgb(185, 231, 98);
+}
