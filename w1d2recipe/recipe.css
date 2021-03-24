@@ -13,3 +13,26 @@ h1 {
     font-size: 22pt;
     text-align: center;
 }
+
+body {
+    color: #404040;
+    font-size: 11pt;
+}
+
+a {
+    color: #A4A400;
+}
+
+.deleted-text {
+    text-decoration: line-through;
+}
+
+pre {
+    font-family: monospace;
+    text-align: right;
+}
+
+blockquote {
+    background-color: #FFFFA8;
+    font-style: italic;
+}
