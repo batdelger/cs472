@@ -1,12 +1,12 @@
 # Exercise : Float Boxes
-Иймэрхүү төрлийн layout хийхэд flex box ашигладаг болоод удсан болохоор float-г мартсан байна. Float-ийг break хийх дээр лекцээс туслалцаа авлаа.
+Flex boxes have been used for this type of layout for a long time, so I forgot about float. I got help from the lecture to break the float.
 
 # Exercise : Menu
-Энэ нь амархан байсан.
+It was easy.
 
 
 # Exercise : Layout2
-Энэ бол харин хэцүү байлаа. Өөрөө удаан нухалгүй будаа идчихлээ
+It was difficult. I finished with help of the solution on the next slide.
 
 # Exercise : More Floats
-Нилээд хэцүү байлаа. Ихэнхийг тэсэлгүй шийдлүүдийг нь харж байж хийлээ.
+It was very difficult. Most of them were done with help of the solutions.

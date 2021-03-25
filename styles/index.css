@@ -1,0 +1,36 @@
+body {
+    background-color: #FFEBEE
+}
+
+.profile {
+    width: 500px;
+}
+
+.area1 {
+    background-color: #b5b2f1;
+    padding-top: 83px !important;
+}
+
+.image {
+    top: -89px;
+    position: relative
+}
+
+.image img {
+    box-shadow: 5px 6px 6px 2px #e9ecef
+}
+
+.area2 {
+    background-color: #fff;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 650
+}
+
+.information {
+    color: #9FA8DA;
+    font-weight: 500;
+    font-size: 16px
+}
