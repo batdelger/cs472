@@ -1,0 +1,89 @@
+/* Exercise : Float Boxes */
+#container01 {
+    border: dashed #000 1px;
+    height: 150px;
+}
+
+.box {
+    float:left;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    margin: 5px;
+}
+
+.break {
+    clear: left;
+}
+
+/* Exercise : Menu */
+#container02 {
+    background-color: red;
+    padding: 20px;
+    text-align: center;
+}
+
+#container02 li {
+    display: inline;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+
+/* Exercise : Layout2 */
+#container03 {
+    background-color: lightgray;
+    overflow: hidden;
+    padding: 10px;
+    width: 500px;
+}
+
+#container03 h1 {
+    background-color: yellow;
+}
+
+#col1, #col2 {
+    background-color: lightblue;
+    float: right;
+    margin-left: 10px;
+    width: 100px;
+}
+
+
+/* Exercise : More Floats */
+#container04 {
+    display: flex;
+}
+.sub-container {
+    margin: 10px;
+}
+
+#container04-01, #container04-02, #container04-03 {
+    background-color: lightgray;
+    overflow: hidden;
+    padding: 10px;
+    width: 500px;
+}
+
+#a-01, #b-01, #a-02, #b-02, #a-03, #b-03 {
+    width: 100px;
+    height: 100px;
+    font: 30pt bold Helvetica, Arial, sans-serif;
+    line-height: 100px;
+    text-align: center;
+}
+
+#a-01, #a-02, #a-03 { background-color: lightblue; }
+#b-01, #b-02, #b-03 { background-color: pink; }
+#c-01, #c-02, #c-03 { background-color: lightgray; }
+
+#a-01 { float:left; }
+#b-01 { float: right; }
+
+#a-02 { float:left; }
+#b-02 { float: right; clear: left; }
+
+#a-03 { float:left; }
+#b-03 { float: right; clear: left; }
+#c-03 { clear: left; }
