@@ -38,7 +38,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <h3>New Product Form</h3>
-                <form>
+                <form onsubmit="onSubmit(event);">
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="inputUnitPrice">Unit Price</label>
-                                <input type="number" class="form-control" id="inputUnitPrice" value="0.0">
+                                <input type="number" class="form-control" id="inputUnitPrice" value="0.0" step="0.01">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -68,7 +68,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="inputSuppliedDate">Product Number</label>
+                                <label for="inputSuppliedDate">Supplied Date</label>
                                 <input type="date" class="form-control" id="inputSuppliedDate"
                                     aria-describedby="dateHelp">
                                 <small id="dateHelp" class="form-text text-muted">Enter a valid Date.</small>
@@ -89,6 +89,34 @@
         </div>
 
     </div>
+
+
+    <script>
+        function onSubmit(e) {
+            e.preventDefault();
+            try {
+                let productNumber = document.getElementById('inputProductNumber').value;
+                let name = document.getElementById('inputProductName').value;
+                let unitPrice = document.getElementById('inputUnitPrice').value;
+                let quantity = document.getElementById('inputQuantity').value;
+                let supplier = document.getElementById('inputSupplier').value;
+                let suppliedDate = document.getElementById('inputSuppliedDate').value;
+
+                let str = "Form data:\n";
+                str += "Product Number : " + productNumber + "\n";
+                str += "Name           : " + name + "\n";
+                str += "Unit Price     : " + unitPrice + "\n";
+                str += "Quantity       : " + quantity + "\n";
+                str += "Supplier       : " + supplier + "\n";
+                str += "Supplied Date  : " + suppliedDate + "\n";
+                alert(str);
+            }
+            catch (e) {
+                console.error(e);
+            }
+
+        }
+    </script>
 </body>
 
 </html>

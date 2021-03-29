@@ -11,21 +11,25 @@
 </head>
 
 <body>
+
     <div class="container">
-        <form>
+        <form id="mainForm" onsubmit="onSubmit(event);">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email" value="test@gmail.com">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                     else.</small>
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,})">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"
+                    pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,})" value="vAlidPassword12456">
             </div>
             <div class="form-group">
                 <label for="exampleInputURL1">Homepage URL</label>
-                <input type="url" class="form-control" id="exampleInputURL1" placeholder="Enter homepage URL" pattern="https?://.+">
+                <input type="url" class="form-control" id="exampleInputURL1" placeholder="Enter homepage URL"
+                    pattern="https?://.+" value="https://batdelger.github.io/cs472">
             </div>
             <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -34,7 +38,20 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
+    <script>
+        function onSubmit(e) {
+            e.preventDefault();
+            let email = document.getElementById('exampleInputEmail1').value;
+            let password = document.getElementById('exampleInputPassword1').value;
+            let url = document.getElementById('exampleInputURL1').value;
+            let checkMe = document.getElementById('exampleCheck1').checked;
+            console.log("Form data:");
+            console.log("Email        :", email);
+            console.log("Password     :", password);
+            console.log("Homepage URL :", url);
+            console.log("Check me out :", checkMe);
+        }
+    </script>
 </body>
 
 </html>
