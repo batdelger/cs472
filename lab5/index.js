@@ -77,7 +77,7 @@ console.log("filterLongWords ['jag', 'am', 'testar'], 3:", filterLongWords(["jag
 
 // prob 8
 function computeSumOfSquares(nums) {
-    return nums.reduce((sum, n) => sum + n * n, 0);
+    return nums.reduce((acc, n) => acc + n * n, 0);
 }
 
 console.log("computeSumOfSquares of [1, 2, 3]:", computeSumOfSquares([1, 2, 3]));
@@ -92,7 +92,7 @@ printOddNumbersOnly([1, 2, 3]);
 
 // prob 10
 function computeSumOfSquaresOfEvensOnly(nums) {
-    return nums.filter(n => n % 2 === 0).reduce((sum, n) => sum + n * n, 0);
+    return nums.filter(n => n % 2 === 0).reduce((acc, n) => acc + n * n, 0);
 }
 
 console.log("computeSumOfSquaresOfEvensOnly [1, 2, 3, 4, 5]:", computeSumOfSquaresOfEvensOnly([1, 2, 3, 4, 5]));
