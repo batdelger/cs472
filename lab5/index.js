@@ -112,9 +112,11 @@ console.log("multiply2 of [1, 2, 3, 4]:", multiply2([1, 2, 3, 4]));
 
 // prob 12
 function findSecondBiggest(nums) {
-    let big1 = nums.pop(), big2 = null;
+    if(nums.length < 2)
+        throw new Error('Invalid array. Must have at least 2')
+    let big1 = nums[0], big2 = null;
 
-    nums.forEach(n => {
+    nums.slice(1).forEach(n => {
         if (n > big1) {
             big2 = big1;
             big1 = n;
