@@ -1,0 +1,105 @@
+6)
+const count = (function () {
+    let counter = 0;
+    return {
+        value() {
+            return counter;
+        },
+        add() {
+            return counter += 1;
+        },
+        reset() {
+            counter = 0;
+        }
+    };
+})();
+
+count.add();
+count.add();
+console.log(count.value());
+count.reset();
+console.log(count.value());
+
+
+7)
+In Q6 - counter is a free variable for the add() method. 
+
+8)
+const make_adder = (function (inc) {
+    let counter = 0;
+    return function () {
+        return counter += inc;
+    }
+});
+
+const add5 = make_adder(5);
+const add7 = make_adder(7);
+add5(); add5(); add5();
+add7(); add7(); add7();
+
+9)
+With an IIFE (immediately invoked function expression) we can do it easily. Wrap the all codes in the js file by anonymous function and immediately invoke that anonymous function.
+(function() { /* put all old codes here*/ })();
+
+10)
+const Employee = (function () {
+    let name, age, salary;
+
+    const setName = (newName) => {
+        name = newName;
+    }
+
+    const setAge = (newAge) => {
+        age = newAge;
+    }
+
+    const setSalary = (newSalary) => {
+        salary = newSalary;
+    }
+
+    const getName = () => {
+        return name;
+    }
+
+    const getAge = () => {
+        return age;
+    }
+
+    const getSalary = () => {
+        return salary;
+    }
+
+    const increaseSalary = (percentage) => {
+        setSalary(getSalary() + getSalary() * percentage * 0.01);
+        console.log(getSalary());
+    }
+
+    const increaseAge = () => {
+        setAge(getAge() + 1);
+    }
+
+    return {
+        setName,
+        setAge,
+        setSalary,
+        increaseSalary,
+        increaseAge
+    }
+})();
+
+Employee.setAge(10);
+Employee.setSalary(1000);
+Employee.increaseSalary(10);
+Employee.increaseAge();
+// Since we have no public getter methods we can't test result
+
+
+11)
+Employee.address = null;
+Employee.getAddress = ()=> {
+    return this.address;
+}
+
+Employee.setAddress = (newAddress)=> {
+    this.name = newAddress;
+}
