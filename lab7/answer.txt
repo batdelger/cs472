@@ -1,0 +1,49 @@
+1)
+x = 1;
+var a = 5;
+var b = 10;
+var c = function (a, b, c) {
+    document.write(x); // undefined. not 1. Because of hoisting (line:15 var x = 5;)
+    document.write(a); // 8 
+    var f = function (a, b, c) {
+        b = a;
+        document.write(b); // 8
+        b = c; 
+        var x = 5;
+    }
+    f(a, b, c);
+    document.write(b) //9;
+    var x = 5;
+}
+
+c(8, 9, 10);
+document.write(b); // 10
+document.write(x); // 1
+
+// document.write doesn't print white spaces. So, the result must be shown as - undefined889101
+
+2)
+
+3) B,D,E
+
+4) 
+var x = 9;
+function myFunction() {
+    return x * x;
+}
+document.write(myFunction()); // 81
+x = 5;
+document.write(myFunction()); // 25
+
+// the final result shown in a page is 8125
+
+5)
+var foo = 1;
+function bar() {
+    if (!foo) {
+        var foo = 10;
+    }
+    alert(foo); // 10. Because of hoisting new variable foo is declared in function bar.
+}
+bar();
+// alert shows 10
