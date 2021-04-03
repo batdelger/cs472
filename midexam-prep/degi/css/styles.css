@@ -1,0 +1,13 @@
+.nav-divider {
+    border-left: 1px solid white;
+}
+
+#mainNav {
+    background-color: #E95420;
+}
+
+#spnSlogan {
+    font-family: cursive;
+    font-style: italic;
+    font-size: medium;
+}
