@@ -20,15 +20,26 @@ console.log(`${john.getName()} was born on ${john.birthOfDate}`)
 
 
 // prob2
-let employee = Object.create({
-    ...aPerson,
-    salary: 0.0,
-    hireDate: new Date(),
-    doJob(jobTitle) {
-        console.log(`${this.name} is a ${jobTitle} who earns ${this.salary.toLocaleString('en-US', {
-            style: 'currency',
-            currency: 'USD',
-          })}`);
+let employee = Object.create(aPerson, {
+    salary: {
+        value: 0.0,
+        writable: true,
+        enumerable: true
+    },
+    hireDate: {
+        value: new Date(),
+        writable: true,
+        enumerable: true
+    },
+    doJob: {
+        value: function (jobTitle) {
+            console.log(`${this.name} is a ${jobTitle} who earns ${this.salary.toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD',
+            })}`);
+        },
+        writable: false,
+        enumerable: true
     }
 });
 
