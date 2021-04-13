@@ -1,19 +1,29 @@
 window.onload = function () {
     const divParent = document.getElementById('divParent');
-    const myLink = document.getElementById('myLink');
-
-    divParent.addEventListener('click', () => {
-        console.log('Click Event bubbled');
+    
+    divParent.addEventListener('click', function (e) {
+        console.log(`Click Event handled by ${this.tagName}#${this.id}`);
+        console.log(`But actual clicked element is ${e.target.tagName}#${e.target.id}`);
     });
 
-    myLink.addEventListener('click', (event) => {
-        console.log('myLink is clicked #1');
+    // document.addEventListener('click', (e) => {
+    //      console.log(`Click Event handled by ${this.tagName}#${this.id}`);
+    //      console.log(`But actual clicked element is ${e.target.tagName}#${e.target.id}`);
+    // });
+}
 
-        event.preventDefault();
-        event.stopPropagation();
-        event.returnValue = false; // = event.preventDefault();
-        return false; // does nothing here.
-    });
+
+
+// const myLink = document.getElementById('myLink');
+    
+    // myLink.addEventListener('click', (event) => {
+    //     console.log('myLink is clicked #1');
+
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     event.returnValue = false; // = event.preventDefault();
+    //     return false; // does nothing here.
+    // });
 
     // myLink.onclick = (event) => {
     //     // event.preventDefault();
@@ -21,4 +31,3 @@ window.onload = function () {
     //     console.log('myLink is clicked #2');
     //     return false; // = event.preventDefault();
     // };
-}

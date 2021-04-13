@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Contact App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">CS472-WAP:::Lab12</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <div class="row mt-4">
+                <p id="lblDate" class="col text-right text-muted mb-2">
+                    Tuesday, 12 November 2019
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="font-weight-light">Thank you! Your message has been received as follow:</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-title h4 font-weight-light">Name: <span id="lblName"></span></p>
+                    <p class="card-text text-muted">Gender: <span id="lblGender"></span></p>
+                    <p class="card-text text-muted">Category: <span id="lblCategory"></span></p>
+                    <p class="card-text">Message: <span id="lblMessage"></span></p>
+                    <p class="card-text mt-5">
+                        Please feel free to <a href="contact-us.html">Contact Us</a> again
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mt-1">
+                <div class="col">
+                    <span class="text-muted">Hit Count for this page: <span id="lblHitCount"></span></span>
+                </div>
+                <div class="col text-right">
+                    <span class="text-muted">Total Hit Count for the entire WebApp: <span
+                            id="lblAppHitCount"></span></span>
+                </div>
+            </div>
+        </div> <!-- /container -->
+
+    </main>
+    <footer class="footer mt-auto py-3" style="background-color: #f5f5f5;">
+        <div class="container">
+            <span class="text-muted">Batdelger Otgonbaatar:::CS472-WAP</span>
+        </div>
+    </footer>
+</body>
+
+</html>
